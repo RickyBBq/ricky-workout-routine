@@ -11,7 +11,7 @@ const workoutData = {
                 target: "Lats, Upper Back & Biceps",
                 sets: 4,
                 instructions: "1. Loop band over pull-up bar, place foot in loop.<br>2. Grip bar slightly wider than shoulders.<br>3. Drive elbows down to lift chin over bar, squeezing lats.<br>4. Lower smoothly down to full hang in 2-3 seconds.",
-                youtubeId: "t2B8q1B2cO0",
+                youtubeId: "pZozI1iaW0k",
                 youtubeQuery: "band assisted pull ups form"
             },
             {
@@ -21,7 +21,7 @@ const workoutData = {
                 target: "Lat Width (V-Taper)",
                 sets: 4,
                 instructions: "1. Anchor band over high bar.<br>2. Kneel or sit beneath, holding band ends.<br>3. Drive elbows straight down into your sides.<br>4. Squeeze lats hard at bottom.",
-                youtubeId: "G3q3zM4i5Xw",
+                youtubeId: "_97pmOC2tzE",
                 youtubeQuery: "banded lat pulldown"
             },
             {
@@ -31,7 +31,7 @@ const workoutData = {
                 target: "Shoulders & Upper Chest",
                 sets: 4,
                 instructions: "1. Set up in push-up stance, walk feet forward into upside-down 'V'.<br>2. Lower top of head forward toward floor.<br>3. Press shoulders firmly to push back up.",
-                youtubeId: "sposDXWEB0A",
+                youtubeId: "V6BtY3Lt0Ys",
                 youtubeQuery: "pike push ups standard form"
             },
             {
@@ -41,7 +41,7 @@ const workoutData = {
                 target: "Side Delts (Broad Shoulders)",
                 sets: 3,
                 instructions: "1. Step on middle of resistance band.<br>2. Raise arms sideways to shoulder height with slight elbow bend.<br>3. Lower slowly back to thighs.",
-                youtubeId: "v_Z1zAnY_9A",
+                youtubeId: "gfEyrmxbCbw",
                 youtubeQuery: "resistance band lateral raise"
             },
             {
@@ -51,7 +51,7 @@ const workoutData = {
                 target: "Lower Abs & V-Line",
                 sets: 4,
                 instructions: "1. Hang from bar with active shoulders.<br>2. Curl pelvis upward while raising knees toward chest.<br>3. Avoid swinging momentum.",
-                youtubeId: "hdng3Nm1x_E",
+                youtubeId: "2n4UqRIJyk4",
                 youtubeQuery: "hanging knee raises correct form"
             },
             {
@@ -77,7 +77,7 @@ const workoutData = {
                 target: "Quad & Glute Power",
                 sets: 4,
                 instructions: "1. Place rear foot elevated on chair or bed.<br>2. Drop back knee toward floor while keeping front foot flat.<br>3. Push through front heel to return up.",
-                youtubeId: "2C-uNgKwPLE",
+                youtubeId: "uODWo4YqbT8",
                 youtubeQuery: "bulgarian split squat tutorial"
             },
             {
@@ -117,7 +117,7 @@ const workoutData = {
                 target: "Lower Abs",
                 sets: 3,
                 instructions: "1. Hang strict from pull-up bar.<br>2. Curl knees toward chest without swinging.<br>3. Lower smoothly.",
-                youtubeId: "hdng3Nm1x_E",
+                youtubeId: "2n4UqRIJyk4",
                 youtubeQuery: "hanging knee raises"
             }
         ]
@@ -143,7 +143,7 @@ const workoutData = {
                 target: "Back & Lats",
                 sets: 4,
                 instructions: "1. Clean full range pull-up from dead hang.<br>2. Squeeze lats at top.",
-                youtubeId: "t2B8q1B2cO0",
+                youtubeId: "pZozI1iaW0k",
                 youtubeQuery: "assisted pull ups"
             },
             {
@@ -163,7 +163,7 @@ const workoutData = {
                 target: "Quads & Glutes",
                 sets: 4,
                 instructions: "1. Perform controlled single-leg squats with focus on quad load.",
-                youtubeId: "2C-uNgKwPLE",
+                youtubeId: "uODWo4YqbT8",
                 youtubeQuery: "bulgarian split squat"
             },
             {
@@ -239,7 +239,7 @@ const workoutData = {
                 target: "Abs & Core",
                 sets: 4,
                 instructions: "1. Strict hip flexor & lower ab leg curls.",
-                youtubeId: "hdng3Nm1x_E",
+                youtubeId: "2n4UqRIJyk4",
                 youtubeQuery: "hanging knee raises"
             },
             {
@@ -345,7 +345,7 @@ function renderWorkout(dayId) {
                 </div>
                 <div class="space-y-3">
                     ${data.recoveryItems.map(item => `
-                        <label class="flex items-start space-x-3 p-3.5 sm:p-4 bg-slate-900/60 rounded-xl border border-slate-700/50 cursor-pointer touch-manipulation min-h-[48px]">
+                        <label class="flex items-start space-x-3 p-3.5 sm:p-4 bg-slate-900/90 rounded-xl border border-slate-700/60 cursor-pointer touch-manipulation min-h-[48px]">
                             <input type="checkbox" id="${item.id}" ${state.checks[item.id] ? 'checked' : ''} 
                                 onchange="toggleCheck('${item.id}')" class="mt-0.5 w-5 h-5 sm:w-6 sm:h-6 accent-sky-500 rounded cursor-pointer shrink-0">
                             <div>
@@ -374,7 +374,7 @@ function renderWorkout(dayId) {
 
             <div class="space-y-4">
                 ${data.exercises.map(ex => `
-                    <div class="bg-slate-900/70 border border-slate-700/60 rounded-xl p-3.5 sm:p-4 space-y-3 hover:border-slate-600 transition">
+                    <div class="bg-slate-900/90 border border-slate-700/60 rounded-xl p-3.5 sm:p-4 space-y-3 hover:border-slate-600 transition">
                         <div class="flex items-start sm:items-center justify-between flex-wrap gap-2">
                             <label class="flex items-center space-x-3 cursor-pointer touch-manipulation min-h-[40px] flex-1">
                                 <input type="checkbox" id="${ex.id}_main" ${state.checks[ex.id + '_main'] ? 'checked' : ''} 
@@ -498,25 +498,28 @@ function openTutorial(ex) {
     document.getElementById('modal-instructions').innerHTML = ex.instructions;
 
     const videoContainer = document.getElementById('video-container');
-    const youtubeSearchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(ex.youtubeQuery + ' tutorial calisthenics')}`;
-    const directVideoUrl = ex.youtubeId ? `https://www.youtube.com/watch?v=${ex.youtubeId}` : youtubeSearchUrl;
+    const directVideoUrl = `https://www.youtube.com/watch?v=${ex.youtubeId}`;
+    const embedVideoUrl = `https://www.youtube-nocookie.com/embed/${ex.youtubeId}?autoplay=1&rel=0`;
 
     videoContainer.innerHTML = `
-        <div class="p-6 text-center space-y-3 flex flex-col items-center justify-center">
-            <div class="w-12 h-12 bg-red-600/20 text-red-500 rounded-full flex items-center justify-center text-2xl mb-1">
-                <i class="fa-brands fa-youtube"></i>
-            </div>
-            <p class="text-sm font-semibold text-slate-200">Watch Video Tutorial on YouTube</p>
+        <iframe 
+            class="w-full h-full rounded-xl border-0" 
+            src="${embedVideoUrl}" 
+            title="${ex.name} Tutorial" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+        <div class="absolute bottom-2 right-2 z-10">
             <a href="${directVideoUrl}" target="_blank" rel="noopener noreferrer" 
-               class="inline-flex items-center gap-2 px-5 py-2.5 bg-red-600 hover:bg-red-500 active:bg-red-700 text-white rounded-xl text-xs font-bold transition shadow-lg shadow-red-600/20 touch-manipulation min-h-[40px]">
-                <i class="fa-brands fa-youtube text-base"></i> Open Video in New Tab <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+               class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-600/90 hover:bg-red-600 text-white rounded-lg text-[11px] font-bold transition shadow-md touch-manipulation">
+                <i class="fa-brands fa-youtube"></i> Open in YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
             </a>
         </div>
     `;
 
     const modal = document.getElementById('tutorial-modal');
     modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Prevent body scrolling while modal is active
+    document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
@@ -524,7 +527,6 @@ function closeModal() {
     modal.classList.add('hidden');
     document.body.style.overflow = '';
     
-    // Clear video player iframe to stop audio/video playback upon closing
     const videoContainer = document.getElementById('video-container');
     if (videoContainer) {
         videoContainer.innerHTML = '';
