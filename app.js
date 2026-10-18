@@ -1,4 +1,4 @@
-// Database of Workout Days & Exercises
+// Database of Workout Days & Exercises with validated YouTube video IDs
 const workoutData = {
     1: {
         title: "Day 1: Upper Body & Abs",
