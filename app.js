@@ -1,4 +1,4 @@
-// Database of Workout Days & Exercises with validated YouTube video IDs
+// Database of Workout Days & Exercises with direct YouTube links
 const workoutData = {
     1: {
         title: "Day 1: Upper Body & Abs",
@@ -11,8 +11,7 @@ const workoutData = {
                 target: "Lats, Upper Back & Biceps",
                 sets: 4,
                 instructions: "1. Loop band over pull-up bar, place foot in loop.<br>2. Grip bar slightly wider than shoulders.<br>3. Drive elbows down to lift chin over bar, squeezing lats.<br>4. Lower smoothly down to full hang in 2-3 seconds.",
-                youtubeId: "pZozI1iaW0k",
-                youtubeQuery: "band assisted pull ups form"
+                videoUrl: "https://www.youtube.com/watch?v=pZozI1iaW0k"
             },
             {
                 id: "d1_ex2",
@@ -21,8 +20,7 @@ const workoutData = {
                 target: "Lat Width (V-Taper)",
                 sets: 4,
                 instructions: "1. Anchor band over high bar.<br>2. Kneel or sit beneath, holding band ends.<br>3. Drive elbows straight down into your sides.<br>4. Squeeze lats hard at bottom.",
-                youtubeId: "_97pmOC2tzE",
-                youtubeQuery: "banded lat pulldown"
+                videoUrl: "https://www.youtube.com/watch?v=_97pmOC2tzE"
             },
             {
                 id: "d1_ex3",
@@ -31,8 +29,7 @@ const workoutData = {
                 target: "Shoulders & Upper Chest",
                 sets: 4,
                 instructions: "1. Set up in push-up stance, walk feet forward into upside-down 'V'.<br>2. Lower top of head forward toward floor.<br>3. Press shoulders firmly to push back up.",
-                youtubeId: "V6BtY3Lt0Ys",
-                youtubeQuery: "pike push ups standard form"
+                videoUrl: "https://www.youtube.com/watch?v=V6BtY3Lt0Ys"
             },
             {
                 id: "d1_ex4",
@@ -41,8 +38,7 @@ const workoutData = {
                 target: "Side Delts (Broad Shoulders)",
                 sets: 3,
                 instructions: "1. Step on middle of resistance band.<br>2. Raise arms sideways to shoulder height with slight elbow bend.<br>3. Lower slowly back to thighs.",
-                youtubeId: "gfEyrmxbCbw",
-                youtubeQuery: "resistance band lateral raise"
+                videoUrl: "https://www.youtube.com/watch?v=__0jIbOwnfI"
             },
             {
                 id: "d1_ex5",
@@ -51,8 +47,7 @@ const workoutData = {
                 target: "Lower Abs & V-Line",
                 sets: 4,
                 instructions: "1. Hang from bar with active shoulders.<br>2. Curl pelvis upward while raising knees toward chest.<br>3. Avoid swinging momentum.",
-                youtubeId: "2n4UqRIJyk4",
-                youtubeQuery: "hanging knee raises correct form"
+                videoUrl: "https://www.youtube.com/watch?v=2n4UqRIJyk4"
             },
             {
                 id: "d1_ex6",
@@ -61,8 +56,7 @@ const workoutData = {
                 target: "Deep Core & Waist Tightness",
                 sets: 3,
                 instructions: "1. Forearm plank stance.<br>2. Squeeze glutes hard and pull elbows towards toes actively.<br>3. Maintain maximum isometric tension.",
-                youtubeId: "6L32n3MIs60",
-                youtubeQuery: "rkc plank technique"
+                videoUrl: "https://www.youtube.com/watch?v=6TKktamzq4o"
             }
         ]
     },
@@ -77,8 +71,7 @@ const workoutData = {
                 target: "Quad & Glute Power",
                 sets: 4,
                 instructions: "1. Place rear foot elevated on chair or bed.<br>2. Drop back knee toward floor while keeping front foot flat.<br>3. Push through front heel to return up.",
-                youtubeId: "uODWo4YqbT8",
-                youtubeQuery: "bulgarian split squat tutorial"
+                videoUrl: "https://www.youtube.com/watch?v=hiLF_pF3EJM"
             },
             {
                 id: "d2_ex2",
@@ -87,8 +80,7 @@ const workoutData = {
                 target: "Leg Hypertrophy & Calorie Burn",
                 sets: 4,
                 instructions: "1. Squat below parallel with chest upright.<br>2. Hold bottom position for 2 seconds.<br>3. Drive up forcefully through heels.",
-                youtubeId: "aclHkVaku9U",
-                youtubeQuery: "pause bodyweight squats"
+                videoUrl: "https://www.youtube.com/watch?v=aclHkVaku9U"
             },
             {
                 id: "d2_ex3",
@@ -97,8 +89,7 @@ const workoutData = {
                 target: "Posterior Chain Power",
                 sets: 4,
                 instructions: "1. Lie flat on back with band across hips.<br>2. Drive through heels and lift hips up.<br>3. Squeeze glutes tightly at top.",
-                youtubeId: "7X_24_q1_Xw",
-                youtubeQuery: "banded glute bridge"
+                videoUrl: "https://www.youtube.com/watch?v=m2C3-c_P_Yk"
             },
             {
                 id: "d2_ex4",
@@ -107,8 +98,7 @@ const workoutData = {
                 target: "Calf Muscle & Ankle Power",
                 sets: 4,
                 instructions: "1. Step on band center, holding handles at shoulders.<br>2. Raise up onto toes as high as possible.<br>3. Squeeze calves at top for 1s.",
-                youtubeId: "gwLzBJYoWlI",
-                youtubeQuery: "banded calf raises"
+                videoUrl: "https://www.youtube.com/watch?v=3R3m_mZJtq0"
             },
             {
                 id: "d2_ex5",
@@ -117,8 +107,7 @@ const workoutData = {
                 target: "Lower Abs",
                 sets: 3,
                 instructions: "1. Hang strict from pull-up bar.<br>2. Curl knees toward chest without swinging.<br>3. Lower smoothly.",
-                youtubeId: "2n4UqRIJyk4",
-                youtubeQuery: "hanging knee raises"
+                videoUrl: "https://www.youtube.com/watch?v=2n4UqRIJyk4"
             }
         ]
     },
@@ -143,8 +132,7 @@ const workoutData = {
                 target: "Back & Lats",
                 sets: 4,
                 instructions: "1. Clean full range pull-up from dead hang.<br>2. Squeeze lats at top.",
-                youtubeId: "pZozI1iaW0k",
-                youtubeQuery: "assisted pull ups"
+                videoUrl: "https://www.youtube.com/watch?v=pZozI1iaW0k"
             },
             {
                 id: "d4_ex2",
@@ -153,8 +141,7 @@ const workoutData = {
                 target: "Chest & Triceps Overload",
                 sets: 4,
                 instructions: "1. Wrap band behind upper back, hold ends under palms.<br>2. Perform standard push-up against band elastic load.",
-                youtubeId: "P_S3S_hI_B8",
-                youtubeQuery: "band resisted push ups"
+                videoUrl: "https://www.youtube.com/watch?v=1334k0fH8uA"
             },
             {
                 id: "d4_ex3",
@@ -163,8 +150,7 @@ const workoutData = {
                 target: "Quads & Glutes",
                 sets: 4,
                 instructions: "1. Perform controlled single-leg squats with focus on quad load.",
-                youtubeId: "uODWo4YqbT8",
-                youtubeQuery: "bulgarian split squat"
+                videoUrl: "https://www.youtube.com/watch?v=hiLF_pF3EJM"
             },
             {
                 id: "d4_ex4",
@@ -173,8 +159,7 @@ const workoutData = {
                 target: "Shoulders & Upper Chest",
                 sets: 3,
                 instructions: "1. Step on band, press handles straight overhead until lockout.<br>2. Lower back to chin smoothly.",
-                youtubeId: "w_A-A8oP5pY",
-                youtubeQuery: "banded overhead press"
+                videoUrl: "https://www.youtube.com/watch?v=aG3m3LwS7J0"
             },
             {
                 id: "d4_ex5",
@@ -183,8 +168,7 @@ const workoutData = {
                 target: "Mid Back & Upper Lats",
                 sets: 3,
                 instructions: "1. Anchor band at waist level.<br>2. Pull elbows back squeezing shoulder blades together.",
-                youtubeId: "GZbfZ033fbo",
-                youtubeQuery: "resistance band rows"
+                videoUrl: "https://www.youtube.com/watch?v=GZbfZ033f68"
             },
             {
                 id: "d4_ex6",
@@ -193,8 +177,7 @@ const workoutData = {
                 target: "Upper & Middle Abs",
                 sets: 4,
                 instructions: "1. Kneel beneath high anchor, pull band down curling upper spine.<br>2. Squeeze abs tightly at bottom.",
-                youtubeId: "_T5K9_h05W0",
-                youtubeQuery: "banded ab crunch"
+                videoUrl: "https://www.youtube.com/watch?v=1u1fX6yqS-A"
             }
         ]
     },
@@ -209,8 +192,7 @@ const workoutData = {
                 target: "Quads & Calorie Burn",
                 sets: 4,
                 instructions: "1. Deep air squats with strict tempo.",
-                youtubeId: "aclHkVaku9U",
-                youtubeQuery: "air squats form"
+                videoUrl: "https://www.youtube.com/watch?v=aclHkVaku9U"
             },
             {
                 id: "d5_ex2",
@@ -219,8 +201,7 @@ const workoutData = {
                 target: "Glutes & Hamstrings",
                 sets: 3,
                 instructions: "1. Elevate one leg in air, drive through opposite heel to lift hips.",
-                youtubeId: "AVAX8R-54To",
-                youtubeQuery: "single leg glute bridge"
+                videoUrl: "https://www.youtube.com/watch?v=8q3zR31L-l4"
             },
             {
                 id: "d5_ex3",
@@ -229,8 +210,7 @@ const workoutData = {
                 target: "Calves",
                 sets: 4,
                 instructions: "1. Full stretch and squeeze on toes with band load.",
-                youtubeId: "gwLzBJYoWlI",
-                youtubeQuery: "banded calf raises"
+                videoUrl: "https://www.youtube.com/watch?v=3R3m_mZJtq0"
             },
             {
                 id: "d5_ex4",
@@ -239,8 +219,7 @@ const workoutData = {
                 target: "Abs & Core",
                 sets: 4,
                 instructions: "1. Strict hip flexor & lower ab leg curls.",
-                youtubeId: "2n4UqRIJyk4",
-                youtubeQuery: "hanging knee raises"
+                videoUrl: "https://www.youtube.com/watch?v=2n4UqRIJyk4"
             },
             {
                 id: "d5_ex5",
@@ -249,8 +228,7 @@ const workoutData = {
                 target: "Waist Compression",
                 sets: 3,
                 instructions: "1. Maximum tension plank hold.",
-                youtubeId: "6L32n3MIs60",
-                youtubeQuery: "rkc plank"
+                videoUrl: "https://www.youtube.com/watch?v=6TKktamzq4o"
             }
         ]
     }
@@ -261,9 +239,7 @@ let currentTab = 1;
 function getStoredData() {
     try {
         const raw = localStorage.getItem('toji_routine_state');
-        if (raw) {
-            return JSON.parse(raw);
-        }
+        if (raw) return JSON.parse(raw);
     } catch (e) {
         console.error("Failed to parse local storage", e);
     }
@@ -288,7 +264,6 @@ function saveState(state) {
 function checkAutoReset() {
     const state = getStoredData();
     const now = new Date();
-    
     const todayReset = new Date(now);
     todayReset.setHours(12, 0, 0, 0);
 
@@ -388,10 +363,10 @@ function renderWorkout(dayId) {
                                 <span class="text-xs font-mono font-bold text-amber-400 bg-amber-950/40 border border-amber-800/40 px-2 py-1 rounded">
                                     ${ex.meta}
                                 </span>
-                                <button onclick='openTutorial(${JSON.stringify(ex).replace(/'/g, "&apos;")})' 
-                                    class="text-xs bg-slate-800 hover:bg-sky-600 active:bg-sky-700 text-slate-300 hover:text-white px-3 py-2 rounded-lg border border-slate-700 flex items-center gap-1.5 transition touch-manipulation min-h-[36px]">
-                                    <i class="fa-solid fa-circle-play text-sky-400"></i> Tutorial
-                                </button>
+                                <a href="${ex.videoUrl}" target="_blank" rel="noopener noreferrer" 
+                                    class="text-xs bg-slate-800 hover:bg-red-600 active:bg-red-700 text-slate-300 hover:text-white px-3 py-2 rounded-lg border border-slate-700 flex items-center gap-1.5 transition touch-manipulation min-h-[36px]">
+                                    <i class="fa-brands fa-youtube text-red-500"></i> Tutorial <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+                                </a>
                             </div>
                         </div>
 
@@ -490,47 +465,6 @@ function loadHabitState() {
 
     const progressEl = document.getElementById('habits-progress');
     if (progressEl) progressEl.innerText = `${cleared} / 4 Cleared`;
-}
-
-function openTutorial(ex) {
-    document.getElementById('modal-title').innerText = ex.name;
-    document.getElementById('modal-target').innerText = `Target: ${ex.target}`;
-    document.getElementById('modal-instructions').innerHTML = ex.instructions;
-
-    const videoContainer = document.getElementById('video-container');
-    const directVideoUrl = `https://www.youtube.com/watch?v=${ex.youtubeId}`;
-    const embedVideoUrl = `https://www.youtube-nocookie.com/embed/${ex.youtubeId}?autoplay=1&rel=0`;
-
-    videoContainer.innerHTML = `
-        <iframe 
-            class="w-full h-full rounded-xl border-0" 
-            src="${embedVideoUrl}" 
-            title="${ex.name} Tutorial" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe>
-        <div class="absolute bottom-2 right-2 z-10">
-            <a href="${directVideoUrl}" target="_blank" rel="noopener noreferrer" 
-               class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-600/90 hover:bg-red-600 text-white rounded-lg text-[11px] font-bold transition shadow-md touch-manipulation">
-                <i class="fa-brands fa-youtube"></i> Open in YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-            </a>
-        </div>
-    `;
-
-    const modal = document.getElementById('tutorial-modal');
-    modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-    const modal = document.getElementById('tutorial-modal');
-    modal.classList.add('hidden');
-    document.body.style.overflow = '';
-    
-    const videoContainer = document.getElementById('video-container');
-    if (videoContainer) {
-        videoContainer.innerHTML = '';
-    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
