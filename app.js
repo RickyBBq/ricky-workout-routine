@@ -258,7 +258,6 @@ const workoutData = {
 
 let currentTab = 1;
 
-// Get state from localStorage safely
 function getStoredData() {
     try {
         const raw = localStorage.getItem('toji_routine_state');
@@ -286,7 +285,6 @@ function saveState(state) {
     }
 }
 
-// Check auto reset at 12:00 PM
 function checkAutoReset() {
     const state = getStoredData();
     const now = new Date();
@@ -310,7 +308,6 @@ function checkAutoReset() {
         state.lastResetDate = now.toDateString();
 
         saveState(state);
-        showToast("Routine auto-reset at 12:00 PM!");
     }
 
     updateStreakDisplay(state.streak);
@@ -326,7 +323,6 @@ function switchTab(tabId) {
     document.querySelectorAll('.tab-btn').forEach((btn, index) => {
         if (index + 1 === tabId) {
             btn.className = "tab-btn px-4 py-3 rounded-xl font-bold text-xs uppercase tracking-wider whitespace-nowrap transition-all flex items-center gap-2 bg-sky-600 text-white shadow-lg shadow-sky-600/30 touch-manipulation min-h-[44px]";
-            // Scroll active tab into view on mobile devices
             btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         } else {
             btn.className = "tab-btn px-4 py-3 rounded-xl font-bold text-xs uppercase tracking-wider whitespace-nowrap transition-all flex items-center gap-2 bg-slate-800 text-slate-400 hover:bg-slate-700 touch-manipulation min-h-[44px]";
@@ -399,7 +395,6 @@ function renderWorkout(dayId) {
                             </div>
                         </div>
 
-                        <!-- Touch-friendly Set Tracker Boxes -->
                         <div class="flex items-center space-x-2 pt-2 border-t border-slate-800 flex-wrap gap-y-2">
                             <span class="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider shrink-0">Set Tracker:</span>
                             <div class="flex space-x-2 overflow-x-auto py-1">
@@ -464,10 +459,7 @@ function checkRoutineCompletion(state) {
     });
 
     if (totalChecks > 0 && (checkedCount / totalChecks) >= 0.8) {
-        if (!state.completedToday) {
-            state.completedToday = true;
-            showToast("Great job! Day marked as completed.");
-        }
+        state.completedToday = true;
     }
 }
 
@@ -480,7 +472,6 @@ function resetTodayChecklist(confirmUser = false) {
     saveState(state);
     loadHabitState();
     renderWorkout(currentTab);
-    showToast("Today's routine reset.");
 }
 
 function loadHabitState() {
@@ -510,11 +501,12 @@ function openTutorial(ex) {
     const directSearchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(ex.youtubeQuery + ' tutorial calisthenics')}`;
 
     if (ex.youtubeId) {
-        const embedUrl = `https://www.youtube-nocookie.com/embed/${ex.youtubeId}?rel=0&autoplay=1`;
+        // Embed YouTube video with autoplay, permission flags, and fallback error handling
+        const embedUrl = `https://www.youtube.com/embed/${ex.youtubeId}?autoplay=1&rel=0&enablejsapi=1`;
         videoContainer.innerHTML = `
             <iframe src="${embedUrl}" 
                 class="w-full h-full border-0 rounded-xl" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
             </iframe>
         `;
@@ -532,5 +524,23 @@ function openTutorial(ex) {
 
     const modal = document.getElementById('tutorial-modal');
     modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling on touch devices
+    document.body.style.overflow = 'hidden'; // Prevent body scrolling while modal is active
 }
+
+function closeModal() {
+    const modal = document.getElementById('tutorial-modal');
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+    
+    // Clear video player iframe to stop audio/video playback upon closing
+    const videoContainer = document.getElementById('video-container');
+    if (videoContainer) {
+        videoContainer.innerHTML = '';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    checkAutoReset();
+    loadHabitState();
+    switchTab(1);
+});
