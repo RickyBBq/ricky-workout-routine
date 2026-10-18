@@ -498,29 +498,21 @@ function openTutorial(ex) {
     document.getElementById('modal-instructions').innerHTML = ex.instructions;
 
     const videoContainer = document.getElementById('video-container');
-    const directSearchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(ex.youtubeQuery + ' tutorial calisthenics')}`;
+    const youtubeSearchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(ex.youtubeQuery + ' tutorial calisthenics')}`;
+    const directVideoUrl = ex.youtubeId ? `https://www.youtube.com/watch?v=${ex.youtubeId}` : youtubeSearchUrl;
 
-    if (ex.youtubeId) {
-        // Embed YouTube video with autoplay, permission flags, and fallback error handling
-        const embedUrl = `https://www.youtube.com/embed/${ex.youtubeId}?autoplay=1&rel=0&enablejsapi=1`;
-        videoContainer.innerHTML = `
-            <iframe src="${embedUrl}" 
-                class="w-full h-full border-0 rounded-xl" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe>
-        `;
-    } else {
-        videoContainer.innerHTML = `
-            <div class="p-6 text-center space-y-3">
-                <p class="text-sm text-slate-300">Watch the tutorial directly on YouTube:</p>
-                <a href="${directSearchUrl}" target="_blank" rel="noopener noreferrer" 
-                   class="inline-flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-500 text-white rounded-xl text-xs font-bold transition">
-                    <i class="fa-brands fa-youtube text-base"></i> Open Tutorial on YouTube
-                </a>
+    videoContainer.innerHTML = `
+        <div class="p-6 text-center space-y-3 flex flex-col items-center justify-center">
+            <div class="w-12 h-12 bg-red-600/20 text-red-500 rounded-full flex items-center justify-center text-2xl mb-1">
+                <i class="fa-brands fa-youtube"></i>
             </div>
-        `;
-    }
+            <p class="text-sm font-semibold text-slate-200">Watch Video Tutorial on YouTube</p>
+            <a href="${directVideoUrl}" target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center gap-2 px-5 py-2.5 bg-red-600 hover:bg-red-500 active:bg-red-700 text-white rounded-xl text-xs font-bold transition shadow-lg shadow-red-600/20 touch-manipulation min-h-[40px]">
+                <i class="fa-brands fa-youtube text-base"></i> Open Video in New Tab <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+            </a>
+        </div>
+    `;
 
     const modal = document.getElementById('tutorial-modal');
     modal.classList.remove('hidden');
